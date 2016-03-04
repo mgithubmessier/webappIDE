@@ -22,6 +22,9 @@ def index():
 def root():
     compData = ''
     if request.method == 'POST':
+
+        print "Hi"
+
         if 'text' in request.form:
             #obtains contents of the "text" form from index.html
             code = str(request.form['text'])
@@ -36,13 +39,14 @@ def root():
             compData = str(compileJava(str(code)))
         return render_template('index.html', **locals())
     return render_template('index.html')
+
 def compileJava(code):
     print('echo \"'+str(code)+'\" > toCompile.java')
     os.system('echo \"'+ str(code)+ '\" > toCompile.java ')
     #subprocess.Popen('echo \"'+str(code)+'\" > toCompile.java')
     #call(["echo",str(code),"> toCompile.java"])
     os.system("javac toCompile.java 2> console.txt")
-    
+
     scanner = open('console.txt','r')
     compilation = scanner.read()
     scanner.close()
