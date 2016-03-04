@@ -23,9 +23,9 @@ def root():
     compData = ''
     if request.method == 'POST':
 
-        print "Hi"
-
         if 'text' in request.form:
+
+            print "Hi"
             #obtains contents of the "text" form from index.html
             code = str(request.form['text'])
 
