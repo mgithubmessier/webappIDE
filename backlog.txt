@@ -1,0 +1,5 @@
+tabbing in code area actually tabs
+write or obtain a script that auto indents the code
+quotes "" should not require a \"\" in order to be interpretted
+enable running of java code, not just compilation
+change the name of the file being written to, to the name 
