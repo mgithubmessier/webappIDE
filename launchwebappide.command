@@ -1,4 +1,4 @@
-cd /Users/Bookserve/desktop/WebIDE/Webapp\ IDE\ env
+cd /Users/messier_matthew/Desktop/Classes/ACM/WebIDE/Webapp\ IDE\ env
 . bin/activate
-cd  /Users/Bookserve/desktop/WebIDE
+cd  /Users/messier_matthew/Desktop/Classes/ACM/WebIDE
 python WebAppIDE.py
