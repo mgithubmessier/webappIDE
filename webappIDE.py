@@ -21,14 +21,15 @@ def index():
 @app.route('/root', methods=['POST', 'GET'])
 def root():
     compData = ''
+    original = ''
     if request.method == 'POST':
 
         if 'text' in request.form:
 
-            print "Hi"
+
             #obtains contents of the "text" form from index.html
             code = str(request.form['text'])
-
+            original = code
             #prints code from the "text" form from index.html
             print(str(code))
 
