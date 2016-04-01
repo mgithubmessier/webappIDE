@@ -23,10 +23,7 @@ def root():
     compData = ''
     original = ''
     if request.method == 'POST':
-
         if 'text' in request.form:
-
-
             #obtains contents of the "text" form from index.html
             code = str(request.form['text'])
             original = code
@@ -53,6 +50,21 @@ def compileJava(code):
     scanner.close()
     return compilation
 
+
+'''def encrypt(toEncrypt,key):
+    print('webappIDE.py:encrypt():toEncrypt: '+toEncrypt)
+    encrypter = AES.new(key,AES.MODE_CBC,1)
+    encryption = encrypter.encrypt(toEncrypt)
+    print('weappIDE.py:encrypt():encryption: '+encryption)
+    return encryption
+    
+def decrypt(toDecrypt,key):
+    print('webappIDE.py:decrypt():toDecrypt: ' +toDecrypt)
+    decrypter = AES.new(key,AES.MODE_CBC,1)
+    decryption = decrypter.decrypt(toDecrypt)
+    print('webappIDE.py:decrypt():decryption: ' +decryption)
+    return decryption
+'''
 if __name__ == "__main__":
     app.secret_key = 'jykasgAKUJRkyt5456^%438z'
     app.run(host='0.0.0.0', debug=True)
